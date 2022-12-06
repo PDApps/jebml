@@ -52,7 +52,7 @@ public class ProtoType<T extends Element>
     final ProtoType<? extends Element> eType = CLASS_MAP.get(codeValue);
     if (eType == null)
     {
-      LOG.warn("Unrecognized element type {}", Long.toHexString(codeValue));
+      System.out.printf("Unrecognized element type %s\n", Long.toHexString(codeValue));
       return null;
     }
     LOG.trace("Got codename {}, for element type {}", codename, eType.name);

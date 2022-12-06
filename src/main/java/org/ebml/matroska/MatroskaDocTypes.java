@@ -95,6 +95,9 @@ public final class MatroskaDocTypes
   public static final ProtoType<UnsignedIntegerElement> FlagEnabled = new ProtoType<>(UnsignedIntegerElement.class, "FlagEnabled", new byte[] {(byte) 0xB9 }, 3);
   public static final ProtoType<UnsignedIntegerElement> FlagDefault = new ProtoType<>(UnsignedIntegerElement.class, "FlagDefault", new byte[] {(byte) 0x88 }, 3);
   public static final ProtoType<UnsignedIntegerElement> FlagForced = new ProtoType<>(UnsignedIntegerElement.class, "FlagForced", new byte[] {(byte) 0x55, (byte) 0xAA }, 3);
+  public static final ProtoType<UnsignedIntegerElement> FlagHearingImpaired = new ProtoType<>(UnsignedIntegerElement.class, "FlagHearingImpaired", new byte[] {(byte) 0x55, (byte) 0xAB }, 3);
+  public static final ProtoType<UnsignedIntegerElement> FlagOriginal = new ProtoType<>(UnsignedIntegerElement.class, "FlagOriginal", new byte[] {(byte) 0x55, (byte) 0xAE }, 3);
+  public static final ProtoType<UnsignedIntegerElement> FlagVisualImpaired = new ProtoType<>(UnsignedIntegerElement.class, "FlagVisualImpaired", new byte[] {(byte) 0x55, (byte) 0xAC }, 3);
   public static final ProtoType<UnsignedIntegerElement> FlagLacing = new ProtoType<>(UnsignedIntegerElement.class, "FlagLacing", new byte[] {(byte) 0x9C }, 3);
   public static final ProtoType<UnsignedIntegerElement> MinCache = new ProtoType<>(UnsignedIntegerElement.class, "MinCache", new byte[] {(byte) 0x6D, (byte) 0xE7 }, 3);
   public static final ProtoType<UnsignedIntegerElement> MaxCache = new ProtoType<>(UnsignedIntegerElement.class, "MaxCache", new byte[] {(byte) 0x6D, (byte) 0xF8 }, 3);

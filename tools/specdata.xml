@@ -82,6 +82,15 @@
   <element name="FlagEnabled" cppname="TrackFlagEnabled" level="3" id="0xB9" type="uinteger" mandatory="1" minver="2" webm="1" default="1" range="0-1">Set if the track is usable. (1 bit)</element>
   <element name="FlagDefault" cppname="TrackFlagDefault" level="3" id="0x88" type="uinteger" mandatory="1" minver="1" default="1" range="0-1">Set if that track (audio, video or subs) SHOULD be active if no language found matches the user preference. (1 bit)</element>
   <element name="FlagForced" cppname="TrackFlagForced" level="3" id="0x55AA" type="uinteger" mandatory="1" minver="1" default="0" range="0-1">Set if that track MUST be active during playback. There can be many forced track for a kind (audio, video or subs), the player should select the one which language matches the user preference or the default + forced track. Overlay MAY happen between a forced and non-forced track of the same kind. (1 bit)</element>
+    <element name="FlagHearingImpaired" level="3" id="0x55AB" type="uinteger" minver="4" range="0-1" maxOccurs="1">
+    Set to 1 if that track is suitable for users with hearing impairments, set to 0 if it is unsuitable for users with hearing impairments.
+  </element>
+  <element name="FlagOriginal" level="3" id="0x55AE" type="uinteger" minver="4" range="0-1" maxOccurs="1">
+    Set to 1 if that track is in the content's original language, set to 0 if it is a translation
+  </element>
+    <element name="FlagVisualImpaired" level="3" id="0x55AC" type="uinteger" minver="4" range="0-1" maxOccurs="1">
+    Set to 1 if that track is suitable for users with visual impairments, set to 0 if it is unsuitable for users with visual impairments
+  </element>
   <element name="FlagLacing" cppname="TrackFlagLacing" level="3" id="0x9C" type="uinteger" mandatory="1" minver="1" default="1" range="0-1">Set if the track may contain blocks using lacing. (1 bit)</element>
   <element name="MinCache" cppname="TrackMinCache" level="3" id="0x6DE7" type="uinteger" mandatory="1" minver="1" webm="0" default="0">The minimum number of frames a player should be able to cache during playback. If set to 0, the reference pseudo-cache system is not used.</element>
   <element name="MaxCache" cppname="TrackMaxCache" level="3" id="0x6DF8" type="uinteger" minver="1" webm="0">The maximum cache size required to store referenced frames in and the current frame. 0 means no cache is needed.</element>
