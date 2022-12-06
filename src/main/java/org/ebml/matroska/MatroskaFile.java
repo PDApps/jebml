@@ -71,7 +71,7 @@ public class MatroskaFile
   private final List<MatroskaFileTagEntry> tagList = new ArrayList<>();
   private final List<FileCue> cueList = new ArrayList<>();
   private final Deque<MatroskaFileFrame> frameQueue = new ConcurrentLinkedDeque<>();
-  private boolean scanFirstCluster = true;
+  private boolean scanFirstCluster = false;
   private long endOfSegmentHeader;
   private Map<MatroskaDocType, Long> metaSeek = new HashMap<>();
   private int clusterReadIndex = 0;
@@ -151,8 +151,6 @@ public class MatroskaFile
           {
             parseNextCluster(level1);
           }
-          // Break out of this loop, we should only parse the first cluster
-          break;
         }
         else if (level1.isType(MatroskaDocTypes.Tags.getType()))
         {
