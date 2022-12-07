@@ -304,15 +304,21 @@ public enum MatroskaDocType
     return element.getElementType() == protoType;
   }
 
-  public static MatroskaDocType getType(ByteBuffer elementType)
-  {
+  public static MatroskaDocType getType(ByteBuffer elementType) {
     long typeCode = EBMLReader.parseEBMLCode(elementType);
-    return CLASS_MAP.getOrDefault(typeCode, MatroskaDocType.UNKNOWN);
+    MatroskaDocType type = CLASS_MAP.get(typeCode);
+    if (type == null) {
+      type = MatroskaDocType.UNKNOWN;
+    }
+    return type;
   }
 
-  public static MatroskaDocType getType(Element element)
-  {
+  public static MatroskaDocType getType(Element element) {
     long typeCode = element.getElementType().getTypeCode();
-    return CLASS_MAP.getOrDefault(typeCode, MatroskaDocType.UNKNOWN);
+    MatroskaDocType type = CLASS_MAP.get(typeCode);
+    if (type == null) {
+      type = MatroskaDocType.UNKNOWN;
+    }
+    return type;
   }
 }
